@@ -1,0 +1,15 @@
+<header><h3>Categories</h3></header>
+
+<div class="categories_container">
+  <% if(categories.length > 0){ %>
+  <% categories.forEach((category)=>{%>
+    <ul>
+      <li><a href="/category/<%=category.category%>"><%=category.category%></a></li>
+    </ul>
+  <%})%>
+
+  <%}else{%>
+<h1>NO CATEGORY TO DISPLAY</h1>
+  <%}%>
+
+</div>

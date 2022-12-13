@@ -1,0 +1,25 @@
+
+  <div class="latest_post_container">
+    <% if(results.length > 0 ) {%>
+      <% results.forEach((result)=>{%>
+        <a href="/post/<%=result._id%>">
+          <div class="post_box">
+            <div class="post_image_container">
+              <img src="/images/<%=result.image%>" alt="<%=result.image%>" />
+            </div>
+            <div class="post_test_container">
+              <h5><%=result.category%></h5>
+              <h3 class="post_Title">
+                <%=result.title%>
+              </h3>
+              <p>
+                <%=result.snippet%>
+              </p>
+            </div>
+          </div>
+        </a>
+      <%})%>
+    <%}else{%>
+      <h1>NO POST TO DISPLAY</h1>
+    <%}%>
+  </div>

@@ -1,0 +1,29 @@
+<header>
+  <h3>Search Result</h3>
+  <p><a href="/categories">Categories</a></p>
+</header>
+
+<div class="latest_post_container">
+  <% if (searchresults.length > 0) {%>
+  <%searchresults.forEach((searchresult)=>{%>
+  <a href="/post/<%=searchresult._id%>">
+    <div class="post_box">
+      <div class="post_image_container">
+        <img src="/images/<%=searchresult.image%>" alt="<%=searchresult.image%>" />
+      </div>
+      <div class="post_test_container">
+        
+        <h5><%=searchresult.category%></h5>
+        <h3><%=searchresult.title%></h3>
+        <p>
+            <%=searchresult.snippet%>
+        </p>
+      </div>
+    </div>
+  </a>
+  <%})%>
+  <%}else{%>
+    <h1>No matching result</h1>
+    
+  <%}%>
+</div>

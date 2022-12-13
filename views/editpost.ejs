@@ -1,0 +1,78 @@
+<h3 class="submit_new">EDIT POST</h3>
+<div class="form-container" style="padding-bottom: 150px;">
+<form action="/editpost/<%=editpost._id%>?_method=PUT"  method="POST" enctype="multipart/form-data">
+ 
+  <!-- Name -->
+<div class="row">
+  <div class="col-25">
+    <label for="name">Title</label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="name" name="title" placeholder="Add a title" value="<%=editpost.title%>">
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-25">
+      <label for="name">Snippet</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="snippet" placeholder="Add a snippet" value="<%=editpost.snippet%>">
+    </div>
+  </div>
+      <!-- Description -->
+    <div class="row">
+        <div class="col-25">
+          <label for="body">Body</label>
+        </div>
+        <div class="col-75">
+          <textarea id="body" name="body" placeholder="Write something.." style="height:200px"><%=editpost.body%></textarea>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div class="row">
+        <div class="col-25">
+          <label for="image">Add Image</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="file"
+            id="image"
+            name="image"
+            placeholder="upload an image"
+            accept="image/"
+          />
+        </div>
+      </div>
+    
+      <!-- category -->
+      <div class="row">
+        <div class="col-25">
+          <label for="category">Choose Category</label>
+        </div>
+        <div class="col-75">
+          <select id="category" name="category">
+            <option value="<%=editpost.category%>"><%=editpost.category%></option>
+            <option value="select">--select--</option>
+            <option value="SPORT">SPORT</option>
+            <option value="MUSIC">MUSIC</option>
+            <option value="PROGRAMMING">PROGRAMMING</option>
+           
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Author's name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="authorname" placeholder="Add a Author's Name" value="<%=username%>">
+        </div>
+      </div>
+
+    <div class="row">
+    <input type="submit" value="Submit">
+    </div>
+</form>

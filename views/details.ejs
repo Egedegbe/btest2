@@ -1,0 +1,44 @@
+
+<div class="details_page_header">
+  <% if (post.length != '') {%>
+    <%if(loggedIn){%>
+      <form action="/postdelete/<%=post._id%>?_method=DELETE" method="post">
+  <input type="submit" value="delete">
+      </form>
+    <p><a href="/editpost/<%=post._id%>">Edit Post</a></p>
+
+    <%}%>
+  <h3><%=post.title%> by <%=post.authorName%></h3>
+  <p><%=post.createdAt%></p>
+</div>
+<div class="post_image">
+  <img src="/images/<%=post.image%>" alt="<%=post.image%>" />
+</div>
+
+<div class="post_text">
+  <p><%=post.body%></p>
+</div>
+<%}%>
+
+<div class="other_post_container">
+  <h5 class="other_post_text">Other post</h5>
+  <div class="other_post">
+    <% if(otherposts.length > 0 ){%>
+      <% otherposts.forEach((otherpost)=>{%>
+        <a href="/post/<%=otherpost._id%>">
+          <div class="post_box">
+            <div class="post_image_container">
+              <img src="/images/<%=otherpost.image%>" alt="<%=otherpost.image%>" />
+            </div>
+            <div class="post_test_container">
+              <h5><%=otherpost.category%></h5>
+              <p>
+                <%=otherpost.snippet%>
+              </p>
+            </div>
+          </div>
+        </a>
+        <%})%>
+      <%}%>
+      </div>
+</div>

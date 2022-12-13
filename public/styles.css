@@ -1,0 +1,426 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* nav-bar  */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 53px;
+    height: 60px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    border-bottom: solid 1px rgb(237, 231, 231);
+    top: 0;
+    background-color: white;
+  }
+  
+  nav span a {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  nav form input {
+    outline: none;
+    padding: 7px;
+  }
+  /* main_page */
+  .main_container {
+    max-width: 1311px;
+    margin: 0 auto;
+    padding: 114px 0;
+  }
+  
+  header h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header p {
+    padding-top: 10px;
+  }
+  
+  header a {
+    color: black;
+    text-decoration: underline 1px #ccc;
+    transition: 0.5s;
+  }
+  header a:hover {
+    text-decoration: underline 1px brown;
+    color: brown;
+  }
+  
+  .latest_post_container {
+    margin-top: 74px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+  }
+  .latest_post_container a {
+    text-decoration: none;
+  }
+  
+  .post_box {
+    /* border: solid 1px black; */
+    height: 300px;
+    width: 410px;
+    margin: 0px 0px 20px 0px;
+  }
+  
+  .post_image_container {
+    width: 409px;
+    height: 200px;
+    border: solid 1px #ccc;
+  }
+  .post_image_container img {
+    object-fit: cover;
+    width: 410px;
+    height: 200px;
+  }
+  .post_test_container {
+    padding-top: 10px;
+  }
+  
+  .post_test_container h5 {
+    font-size: 16px;
+    color: #e21293;
+    font-weight: lighter;
+  }
+  .post_test_container p {
+    font-size: 14px;
+    text-align: start;
+    color: #765076;
+    padding-top: 10px;
+    line-height: 18px;
+  }
+  .post_Title{
+    color: #151516;
+  }
+  /* main_page_ends */
+  
+  .main2_container {
+    max-width: 1332px;
+    margin: 0 auto;
+    padding: 114px 0;
+  }
+  .details_page_header {
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 33px;
+  }
+  
+  .post_image {
+    /* width: 409px;
+      height: 200px; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .post_image img {
+    object-fit: cover;
+    width: 611px;
+    height: 454px;
+  }
+  .post_text {
+    padding: 20px;
+  }
+  .post_text p {
+    margin: 0 auto 24px;
+    width: 530px;
+    padding-top: 27px;
+    line-height: 1.7;
+    color: #151516;
+    font-family: sans-serif;
+  }
+  
+  .other_post_container {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    padding: 57px;
+  }
+  .other_post {
+    margin-top: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+  }
+  .other_post a {
+    text-decoration: none;
+  }
+  .other_post_container .other_post_text {
+    color: #ccc;
+    margin-left: 71px;
+  }
+  .categories_container{
+    margin-top: 28px;
+  }
+  .categories_container ul{
+    list-style-type: none;
+  }
+  .categories_container li{
+  line-height: 30px;
+  }
+  .categories_container ul li  a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: .5s;
+  }
+  .categories_container ul li  a:hover{
+    color: brown;
+    text-decoration: underline brown 1px;
+  }
+  
+  
+  .submit_new {
+    color: #063146;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 75px;
+  }
+  
+  input[type="text"],
+  input[type="file"] select,
+  textarea {
+    width: 96%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  input[type="text"]:focus,
+  select:focus,
+  textarea:focus,
+  input[type="file"]:focus {
+    outline-color: #063146;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type="submit"],
+  .button {
+    background-color: #063146;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 6px;
+  }
+  
+  .form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide*/
+  @media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type="submit"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  .signup {
+    border: 3px solid #f1f1f1;
+    width: 70%;
+    margin: 0 auto;
+  }
+  /* Full-width input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  /* Set a style for all buttons */
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  button:hover {
+    opacity: 1;
+  }
+  /* Extra styles for the cancel button */
+  .resetbtn {
+    padding: 14px 20px;
+    background-color: #8836f4;
+    border: none;
+    margin-top: 8.9px;
+    color: white;
+  }
+  /* Float cancel and signup buttons and add an equal width */
+  .resetbtn,
+  .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  .google {
+    width: 100%;
+    background: red;
+  }
+  /* Add padding to container elements */
+  .container2 {
+    padding: 16px;
+  }
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .resetbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+  .alert-success {
+    padding: 10px;
+    background: lightgreen;
+    color: darkgreen;
+  }
+  
+  .alert-danger {
+    padding: 10px;
+    background: rgb(249, 166, 166);
+    color: red;
+    margin: 10px 0;
+  }
+  .login {
+    border: 3px solid #f1f1f1;
+    width: 70%;
+    margin: 0 auto;
+  }
+  /* Full-width inputs */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  /* Set a style for all buttons */
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  /* Extra style for the cancel button (red) */
+  .resetbtn2 {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+  }
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  /* Avatar image */
+  img.avatar {
+    width: 20%;
+    border-radius: 50%;
+  }
+  /* Add padding to containers */
+  .container3 {
+    padding: 40px;
+  }
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  span.new {
+    padding-top: 16px;
+  }
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .resetbtn2 {
+      width: 100%;
+    }
+  }
+  /* footer starts */
+  footer {
+    border-top: solid 1px #333;
+    width: 200px;
+    margin-top: 30px;
+    line-height: 25px;
+    color: #765076;
+  }
+  
+  /* footer ends */
+  
